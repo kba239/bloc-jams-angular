@@ -11,7 +11,7 @@ var albumPicasso = {
          { title: 'Pink', duration: 153.14, audioUrl: 'assets/music/pink' },
          { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/magenta' }
      ]
- };
+};
 
 var albumMarconi = {
      title: 'The Telephone',
@@ -26,4 +26,4 @@ var albumMarconi = {
          { title: 'Can you hear me now?', duration: '3:14' },
          { title: 'Wrong phone number', duration: '2:15'}
      ]
- };
+};
