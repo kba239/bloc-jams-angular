@@ -75,6 +75,11 @@
       }
     };
 
+    var stopSong = function() {
+      currentBuzzObject.stop();
+      song.playing = null;
+    };
+
 /**
 * @function pause
 * @desc Pause current song
@@ -96,6 +101,25 @@
         currentSongIndex--;
 
       if (currentSongIndex < 0) {
+        currentBuzzObject.stop();
+        SongPlayer.currentSong.playing = null;
+      } else {
+        var song = currentAlbum.songs[currentSongIndex];
+        setSong(song);
+        playSong(song);
+      }
+    };
+
+/**
+* @function next
+* @desc Play next song
+* @param {Object}
+*/
+    SongPlayer.next = function() {
+      var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+        currentSongIndex++;
+
+      if (currentSongIndex > currentAlbum.length) {
         currentBuzzObject.stop();
         SongPlayer.currentSong.playing = null;
       } else {
