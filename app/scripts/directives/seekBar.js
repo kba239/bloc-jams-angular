@@ -49,6 +49,13 @@
             $document.unbind('mouseup.thumb');
           });
         };
+
+        scope.thumbStyle = function() {
+          return {width: trackThumb()};
+        };
+
+
+        };
       }
     };
   }
