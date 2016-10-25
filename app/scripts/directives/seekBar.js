@@ -71,9 +71,6 @@
         scope.thumbStyle = function() {
           return {width: trackThumb()};
         };
-
-
-        };
       }
     };
   }
