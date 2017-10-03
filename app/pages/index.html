@@ -26,12 +26,42 @@
   <ui-view></ui-view>
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+  <!-- AngularUI Router -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+  <!-- AngularFire -->
+  <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+
+  <!-- FireBase -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+  <!-- Initialize Firebase -->
+    <script>
+      var config = {
+        apiKey: "AIzaSyDwEDxDYy8FTtvfEN3vRt-t_6P3549T-c0",
+        authDomain: "fe-blocmetrics.firebaseapp.com",
+        databaseURL: "https://fe-blocmetrics.firebaseio.com",
+        projectId: "fe-blocmetrics",
+        storageBucket: "",
+        messagingSenderId: "838870077711"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+
+
+  <!--Application Files -->
   <script src="/scripts/app.js"></script>
   <script src="/scripts/services/Fixtures.js"></script>
   <script src="/scripts/services/SongPlayer.js"></script>
+  <script src="/scripts/services/Metrics.js"></script>
   <script src="/scripts/controllers/LandingCtrl.js"></script>
   <script src="/scripts/controllers/CollectionCtrl.js"></script>
   <script src="/scripts/controllers/AlbumCtrl.js"></script>
