@@ -69,7 +69,7 @@
         };
 
         scope.thumbStyle = function() {
-          return {width: trackThumb()};
+          return {width: scope.trackThumb()};
         };
       }
     };

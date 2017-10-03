@@ -1,5 +1,5 @@
 (function() {
-  function SongPlayer($rootScope, Fixtures) {
+  function SongPlayer($rootScope, Fixtures, Metrics) {
     var SongPlayer = {};
 
 /**
@@ -33,6 +33,10 @@
         $rootScope.$apply(function() {
           SongPlayer.currentTime = currentBuzzObject.getTime();
         });
+      });
+
+      currentBuzzObject.bind('ended', function(){
+        Metrics.registerSongPlay(SongPlayer.currentSong);
       });
 
       SongPlayer.currentSong = song;
@@ -156,7 +160,7 @@
 /**
 * @function setCurrentVolume
 * @desc Set current volume of currently playing song
-* @param {Number} 
+* @param {Number}
 */
      SongPlayer.setCurrentVolume = function(value) {
        if (currentBuzzObject) {
@@ -169,5 +173,5 @@
 
   angular
     .module('blocJams')
-    .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
+    .factory('SongPlayer', ['$rootScope', 'Fixtures', 'Metrics', SongPlayer]);
 })();
